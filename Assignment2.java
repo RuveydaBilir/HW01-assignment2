@@ -1,3 +1,7 @@
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.Random;
+
 class Assignment2{
     }
 
@@ -22,6 +26,35 @@ class Assignment2{
 
     }
   //method b
+  public static void displaymenu(int[] arr){
+    int choice;
+    Scanner in = new Scanner(System.in);
+
+    do {
+      System.out.printf("1.Find the minimum of the array\n2.Find the maximum of the array\n3.Find the average of the array \n4.Find the sum of elements with odd- and even-numbered indexes \n5.Exit");
+      System.out.print("Enter your choice: ");
+      choice = in.nextInt();
+      if ( choice == 1 ){
+        System.out.printf("minimum number:%d%n",findMin(arr));
+        
+      }
+      else if ( choice == 2 ){
+        System.out.printf("maximum number:%d%n",findMax(arr));
+        
+      }
+      else if ( choice == 3 ){
+        System.out.printf("differences from average %s%n",Arrays.toString(findDifference(arr)));
+        
+      }
+      else if ( choice == 4 ){
+        System.out.printf("sum of elements with odd-numbered indexes:%d%n sum of elements with even-numbered indexes:%d",sumOfOddsAndEvens(arr)[0],sumOfOddsAndEvens(arr)[1]);
+        
+      }
+      
+    }while(choice != 5);
+
+
+  }
 
   //method c
   public static int findMin(int[] arr){
