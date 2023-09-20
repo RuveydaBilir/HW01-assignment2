@@ -1,8 +1,26 @@
 class Assignment2{
-    
+    }
 
+class Assignment2{
   //method a
+  public static void main(String[] args) {
+      int arraySize;
+      int randomNumber;
+      Scanner scan = new Scanner(System.in);
+      System.out.print("Enter the array size: ");
+      arraySize = scan.nextInt();
+      int[] arr = new int[arraySize];
 
+      Random rand = new Random();
+
+      for(int i=0; i<arraySize; i++){
+        randomNumber = rand.nextInt(101);
+        arr[i]=randomNumber;
+      }
+
+      displayMenu(arr);
+
+    }
   //method b
 
   //method c
@@ -14,7 +32,6 @@ class Assignment2{
         minNum = arr[i];
       } 
     }
-    return minNum;
   }
 
   public static int findMax(int[] arr){
@@ -25,25 +42,12 @@ class Assignment2{
         maxNum = arr[i];
       } 
     }
-    return maxNum;
   }
   //method d
-  
-  public static double[] findDifference (int[] arr){
-    int sum = 0;
-    for(int i = 0; i < arr.length; i++){
-      sum += arr[i];
-    }
-    double[] differences = new double[arr.length];
-    for(int i = 0; i < arr.length; i++){
-      differences[i] = arr[i] - sum;
-    }
-    return differences;
-  }
 
   //method e
   
-    public int[] sumOfOddsAndEvens(int[] list) {
+    public void sumOfOddsAndEvens(int[] list) {
         int oddSum = 0;
         int evenSum = 0;
         for(int i = 0; i < list.length; i++) {
@@ -54,7 +58,7 @@ class Assignment2{
                 evenSum += list[i];
             }
         }
-        int[] arrayOfSums = {oddSum,evenSum};
-        return arrayOfSums;
+        System.out.println("Sum of the odd numbers is " + oddSum);
+        System.out.println("Sum of the even numbers is " + evenSum);
     }
 }
