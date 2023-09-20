@@ -14,6 +14,7 @@ class Assignment2{
         minNum = arr[i];
       } 
     }
+    return minNum;
   }
 
   public static int findMax(int[] arr){
@@ -24,6 +25,7 @@ class Assignment2{
         maxNum = arr[i];
       } 
     }
+    return maxNum;
   }
   //method d
   
