@@ -51,7 +51,7 @@ class Assignment2{
         int oddSum = 0;
         int evenSum = 0;
         for(int i = 0; i < list.length; i++) {
-            if(list[i] % 2 == 1) {
+            if(i % 2 == 1) {
                 oddSum += list[i];
             }
             else {
