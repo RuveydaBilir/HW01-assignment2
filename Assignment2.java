@@ -1,5 +1,5 @@
 class Assignment2{
-    }
+    
 
   //method a
 
@@ -41,7 +41,7 @@ class Assignment2{
 
   //method e
   
-    public void sumOfOddsAndEvens(int[] list) {
+    public int[] sumOfOddsAndEvens(int[] list) {
         int oddSum = 0;
         int evenSum = 0;
         for(int i = 0; i < list.length; i++) {
@@ -52,7 +52,7 @@ class Assignment2{
                 evenSum += list[i];
             }
         }
-        System.out.println("Sum of the odd numbers is " + oddSum);
-        System.out.println("Sum of the even numbers is " + evenSum);
+        int[] arrayOfSums = {oddSum,evenSum};
+        return arrayOfSums;
     }
 }
